@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Define colors from Catppuccin Mocha theme
+# Colors from Catppuccin Mocha theme
 blue="\033[38;5;110m"
 lavender="\033[38;5;147m"
 pink="\033[38;5;176m"
 reset="\033[0m"
 
-# Gather system stats
 active_memory=$(vm_stat | grep 'Pages active' | awk '{print int($3*4096/1024/1024 + 0.5)}')
 total_memory=$(sysctl -n hw.memsize | awk '{print int($1/1024/1024)}')
 memory_load=$((active_memory * 100 / total_memory))
@@ -22,7 +21,6 @@ else
   battery_time=""
 fi
 
-# Display the welcome message
 echo ""
 echo -e "${blue}Memory:${reset} ${active_memory}MB (${memory_load}%)   ${lavender}CPU Usage:${reset} ${cpu_usage}   ${pink}Battery:${reset} ${battery_percentage} ${battery_status} ${battery_time}"
 echo ""
