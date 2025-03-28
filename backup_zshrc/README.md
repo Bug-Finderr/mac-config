@@ -7,6 +7,7 @@ This script automatically creates backups of your `.zshrc` file whenever it chan
 - Monitors the `.zshrc` file for changes.
 - Automatically creates timestamped backups.
 - Keeps the most recent 10 (configuarble) backups and removes older ones.
+- Limits the log file to the most recent 100 lines to prevent it from growing indefinitely.
 
 ## Setup
 
@@ -71,6 +72,7 @@ This script automatically creates backups of your `.zshrc` file whenever it chan
 - The script monitors your `.zshrc` file for changes using `fswatch`.
 - When a change is detected, it creates a backup in the `actual_backups/` directory with a timestamp.
 - If the number of backups exceeds 10, the oldest backup is automatically deleted.
+- The log file (`backup.log`) is limited to the most recent 100 lines to prevent it from growing indefinitely.
 
 ## Backup Location
 
