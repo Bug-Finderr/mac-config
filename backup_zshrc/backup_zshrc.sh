@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ZSHRC_PATH="$HOME/.zshrc"
-BACKUP_DIR="$HOME/tweaks/backup_zshrc/actual_backups/"
+BACKUP_DIR="$HOME/Dev/tweaks/backup_zshrc/actual_backups"
 MAX_BACKUPS=10
 
 # Les bigint!
@@ -26,3 +26,4 @@ echo "Monitoring $ZSHRC_PATH for changes..."
 fswatch -o "$ZSHRC_PATH" | while read -r; do
     create_backup
 done
+

@@ -1,3 +1,4 @@
+// TODO: Customize
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
@@ -18,21 +19,21 @@
       "type": "prompt",
       "alignment": "left",
       "segments": [
-        {
-          "template": "{{.Icon}} ",
-          "foreground": "p:os",
-          "type": "os",
-          "style": "plain"
-        },
-        {
-          "template": "{{ .UserName }}@{{ .HostName }} ",
-          "foreground": "p:blue",
-          "type": "session",
-          "style": "plain"
-        },
+        // {
+        //   "template": "{{.Icon}} ",
+        //   "foreground": "p:os",
+        //   "type": "os",
+        //   "style": "plain"
+        // },
+        // {
+        //   "template": "{{ .UserName }}@{{ .HostName }} ",
+        //   "foreground": "p:blue",
+        //   "type": "session",
+        //   "style": "plain"
+        // },
         {
           "properties": {
-            "folder_icon": "..\ue5fe..",
+            // "folder_icon": "..\ue5fe..",
             "home_icon": "~",
             "style": "agnoster_short"
           },
